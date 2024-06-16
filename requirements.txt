@@ -1,5 +1,5 @@
-Flask
-flask-cors
+fastapi
+uvicorn
 numpy
 opencv-python-headless
 joblib
