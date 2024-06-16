@@ -14,9 +14,6 @@ CORS(app)  # Enable CORS for all routes
 model_path = "trained_model5_inceptionv3old.joblib"
 loaded_model = joblib.load(model_path)
 
-# Ensure the loaded model is compiled (if necessary)
-# loaded_model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-
 # Define cropping dimensions
 top_crop = 250  # Pixels from the top
 bottom_crop = 100  # Pixels from the bottom
@@ -104,4 +101,4 @@ def index():
     return "Hello, World!"
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True, host='0.0.0.0', port=8000)
